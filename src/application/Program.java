@@ -13,11 +13,12 @@ public class Program {
 		
 		SellerDao obj_1 = DaoFactory.createSellerDaoJDBC();
 		
-		Seller seller = new Seller(null, "bot1", "bot1@gmail.com", new Date(), 5000.0, new Department(2, null));
+		Seller seller = new Seller(17, "bot1", "bot1@gmail.com", new Date(), 5000.0, new Department(2, null));
 		
-		System.out.println("=== TESTE 1 SELLER ===");
-		obj_1.insert(seller);
-		System.out.println("Dados inseridos com sucesso");
+		System.out.println("=== TESTE 2 SELLER ===");
+		seller.setBaseSalary(10000.00);
+		obj_1.update(seller);
+		System.out.println("Dados atualizados com sucesso");
 	}
 
 }
