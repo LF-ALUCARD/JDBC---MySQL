@@ -1,5 +1,7 @@
 package application;
 
+import java.util.List;
+
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
 import model.entities.Seller;
@@ -10,9 +12,9 @@ public class Program {
 		
 		SellerDao obj_1 = DaoFactory.createSellerDaoJDBC();
 		
-		Seller seller = obj_1.findByld(17);
+		List<Seller> list = obj_1.findAll();
 		
-		System.out.println(seller);
+		list.forEach(System.out::println);
 	}
 
 }
