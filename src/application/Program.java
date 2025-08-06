@@ -2,6 +2,7 @@ package application;
 
 import model.dao.DaoFactory;
 import model.dao.SellerDao;
+import model.entities.Seller;
 
 public class Program {
 
@@ -9,7 +10,9 @@ public class Program {
 		
 		SellerDao obj_1 = DaoFactory.createSellerDaoJDBC();
 		
-		obj_1.delete(17);
+		Seller seller = obj_1.findByld(17);
+		
+		System.out.println(seller);
 	}
 
 }
