@@ -12,7 +12,7 @@ public class Program {
 		
 		SellerDao obj_1 = DaoFactory.createSellerDaoJDBC();
 		
-		List<Seller> list = obj_1.findAll();
+		List<Seller> list = obj_1.findAllByld(2);
 		
 		list.forEach(System.out::println);
 	}
